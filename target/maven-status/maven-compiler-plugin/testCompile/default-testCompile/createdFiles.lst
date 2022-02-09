@@ -12,6 +12,7 @@ core\Propriedades$Browsers.class
 suites\SuiteGeral.class
 tests\ContaTeste.class
 tests\RemoverMovimentacaoContaTeste.class
+core\DriverFactory$2.class
 core\DriverFactory$1.class
 pages\MenuPage.class
 utils\DataUtils.class
