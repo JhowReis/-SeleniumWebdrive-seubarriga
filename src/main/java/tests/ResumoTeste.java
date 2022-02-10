@@ -35,6 +35,12 @@ public class ResumoTeste extends BaseTest {
 		menuPage.accessarTelaResumoMensal();
 		Assert.assertEquals("Seu Barriga - Extrato", DriverFactory.getDriver().getTitle());
 		
+		resumoPage.selecionarAno("2016");
+		resumoPage.buscar();
+		
+		
+		
+		
 		List<WebElement> elementosEncontrados = 
 				DriverFactory.getDriver().findElements(By.xpath("//*[@id='tabelaExtrato']/tbody/tr"));
 		Assert.assertEquals(0, elementosEncontrados.size());
@@ -44,5 +50,6 @@ public class ResumoTeste extends BaseTest {
 //		}catch (NoSuchElementException e) {
 //			
 //		}
+		
 	}
 }

@@ -12,7 +12,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import core.BaseTest;
-import core.Propriedades;
 import pages.MenuPage;
 import pages.MovimentacaoPage;
 import utils.DataUtils;
@@ -32,7 +31,7 @@ public class MovimentacaoTeste extends BaseTest {
 		movimentacaoPage.setDescricao("Movimentação bancária");
 		movimentacaoPage.setInteressado("Sim");
 		movimentacaoPage.setValor("900");
-		movimentacaoPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
+		movimentacaoPage.setConta("Conta para movimentacoes");
 		movimentacaoPage.setStatusPago();
 		movimentacaoPage.salvar();
 		
@@ -72,7 +71,7 @@ public class MovimentacaoTeste extends BaseTest {
 		movimentacaoPage.setDescricao("Movimentação bancária");
 		movimentacaoPage.setInteressado("Sim");
 		movimentacaoPage.setValor("900");
-		movimentacaoPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
+		movimentacaoPage.setConta("Conta para movimentacoes");
 		movimentacaoPage.setStatusPago();
 		movimentacaoPage.salvar();
 		

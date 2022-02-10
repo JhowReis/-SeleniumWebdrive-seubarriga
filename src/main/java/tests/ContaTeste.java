@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import core.BaseTest;
-import core.Propriedades;
 import pages.ContasPage;
 import pages.MenuPage;
 
@@ -20,7 +19,7 @@ public class ContaTeste extends BaseTest {
 	public void teste1_InserirConta() {
 		menuPage.acessarTelaAdicionarConta();
 
-		contasPage.setNome("jonathan");
+		contasPage.setNome("Conta do Teste");
 		contasPage.salvar();
 
 		Assert.assertEquals("Conta adicionada com sucesso!", contasPage.obterMensagemSucesso());
@@ -30,8 +29,8 @@ public class ContaTeste extends BaseTest {
 	public void teste2_alterarConta() {
 		menuPage.acessarTelaListarConta();
 
-		contasPage.clicarAlterarConta("jonathan");
-		contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
+		contasPage.clicarAlterarConta("Conta para alterar");
+		contasPage.setNome("Conta Alterada");
 		contasPage.salvar();
 
 		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
@@ -42,7 +41,7 @@ public class ContaTeste extends BaseTest {
 	public void teste3_inserirContaMesmoNome() {
 		menuPage.acessarTelaAdicionarConta();
 
-		contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
+		contasPage.setNome("Conta mesmo nome");
 		contasPage.salvar();
 
 		Assert.assertEquals("Já existe uma conta com esse nome!", contasPage.obterMensagemErro());
